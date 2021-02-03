@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Sancta Registartion Form</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script> -->
+</head>
+
+<body>
+
+  <div class="page-loader-wrapper">
+    <div class="loader">
+      <div class="m-t-30"><img class="zmdi-hc-spin" src="images/loader.svg" width="48" height="48" alt="Aero"></div>
+      <p>Please wait...</p>
+    </div>
+  </div>
+
+  <div class="testbox">
+    <form onsubmit="return false;" id="main-form" class="sancta">
+      <div class="banner">
+        <h1>Post Admission Form</h1>
+      </div>
+      <br />
+      <div id="validation-errors" style="color: red;display: none;">
+      </div>
+      <fieldset>
+        <legend style="font-style: italic;">Please note the following while completing this form:</legend>
+
+        · All questions are mandatory.<br>
+        · The Form needs to be submitted along with all the necessary supporting documents.<br>
+        · Kindly keep the scanned documents including, photographs of the child and authorised person(s) for ID/ Pick up
+        card, etc.ready before you start filling in the form. <br>
+        · The size of uploaded file should be less than 5 MB.<br>
+        · The following documents are mandatory:<br>
+        a. Copy of DOB certificate/Passport of the child (for proof of date of birth)<br>
+        b. Copy of Adhaar card/ Passport/any other government document for the child and parents (for Indian
+        citizens)<br>
+        c. Copy of OCI Card/VISA for the child who is a foreign national/citizen.<br>
+        d. Passport-size colour photographs of child, mother and father and any 2 other authorised persons for pick-up
+        from school.<br>
+
+
+      </fieldset>
+
+
+
+
+
+
+
+
+
+      <fieldset>
+        <legend>Details</legend>
+
+        <!-- <fieldset> -->
+        <!-- <legend>Details</legend> -->
+        <div class="columns">
+          <div class="item">
+            <p>Enquiring for the year </p>
+            <select class="form-control" id="enquiry_for_year">
+              <option value="2020-2021">2020-2021</option>
+              <option value="2021-2022">2021-2022</option>
+            </select>
+          </div>
+
+
+          <div class="item">
+            <p>Course </p>
+            <select class="form-control" id="course">
+              <option value="Nursery">Nursery</option>
+              <option value="EY1">EY1</option>
+              <option value="EY2">EY2</option>
+              <option value="Grade 01">Grade 01</option>
+              <option value="Grade 02">Grade 02</option>
+              <option value="Grade 03">Grade 03</option>
+              <option value="Grade 04">Grade 04</option>
+              <option value="Grade 05">Grade 05</option>
+              <option value="Grade 06">Grade 06</option>
+              <option value="Grade 07">Grade 07</option>
+              <option value="Grade 08">Grade 08</option>
+              <option value="Grade 09">Grade 09</option>
+              <option value="Grade 10">Grade 10</option>
+              <option value="Grade 11">Grade 11</option>
+              <option value="Grade 12">Grade 12</option>
+            </select>
+
+            </select>
+          </div>
+        </div>
+
+        <div class="columns">
+
+
+          <div class="item">
+            <label for="fname">First Name<span>*</span></label>
+            <input type="text" name="name" class="form-control" id="first_name" />
+
+          </div>
+
+
+          <div class="item">
+            <label for="lname"> Last Name<span>*</span></label>
+            <input id="last_name" type="text" name="lname" class="form-control" />
+          </div>
+
+
+
+          <div class="item">
+            <label for="address">Name Of The School Presently Studying (If Applicable)<span>*</span></label>
+            <input id="school" type="text" name="address" class="form-control" />
+          </div>
+
+          <div class="item">
+            <label for="lname"> Parent Name <span>*</span></label>
+            <input id="parent_name" type="text" name="lname" class="form-control" />
+          </div>
+
+          <div class="item">
+            <label for="phone">Phone Number<span>*</span></label>
+            <input id="phone" type="text" name="phone" class="form-control" />
+          </div>
+
+          <div class="item">
+            <label for="phone">Alternative Phone Number<span>*</span></label>
+            <input id="alternate_phone" type="text" name="phone" class="form-control" />
+          </div>
+          <div class="item">
+            <label for="eaddress">Email Address<span>*</span></label>
+            <input id="email" type="text" name="eaddress" class="form-control" disabled />
+          </div>
+
+          <div class="item">
+            <label for="checkindate">DOB <span>*</span></label>
+            <input id="dob" type="date" name="checkindate" />
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+
+          <div class="item">
+            <p>Gender </p>
+            <select id="gender">
+              <option value="" disabled>Select</option>
+              <option value="Male" selected>Male</option>
+              <option value="Female">Female</option>
+              <option value="Prefer Not to Say">Prefer Not to Say</option>
+            </select>
+          </div>
+
+          <div class="item">
+            <label for=""> Address Line 1 <span>*</span></label>
+            <input id="address_line_1" type="text" name="" class="form-control" />
+          </div>
+
+          <div class="item">
+            <label for=""> Address Line 2 <span>*</span></label>
+            <input id="address_line_2" type="text" name="" class="form-control" />
+          </div>
+        </div>
+        <!-- </fieldset>
+      
+      
+            <fieldset> -->
+        <!-- <legend>About the Child</legend> -->
+
+
+        <div class="columns">
+          <div class="item">
+            <label for="fname">Mother Tongue <span>*</span></label>
+            <input id="mother_tongue" type="text" name="fname" required />
+          </div>
+
+          <div class="item">
+            <label for="fname">Language known <span>*</span></label>
+            <input id="language_known" type="text" name="fname" />
+          </div>
+
+          <div class="item">
+            <label for="fname">Nationality <span>*</span></label>
+            <input id="nationality" type="text" name="fname" />
+          </div>
+
+          <div class="item">
+            <label for="fname">Current Residential Address <span>*</span></label>
+            <input id="current_residential_address" type="text" name="fname" />
+          </div>
+
+          <div class="item">
+            <label for="fname">Permanent Address (if different from current address) </label>
+            <input id="permanent_address" type="text" name="fname" />
+          </div>
+
+          <div class="item">
+            <label for="lname"> Parent Name<span>*</span></label>
+            <input id="child_parent_name" type="text" name="lname" />
+          </div>
+
+          <div class="item">
+            <label for="lname"> Name of the school/pre-school where the child is studying currently
+              <span>*</span></label>
+            <input id="current_school" type="text" name="lname" />
+          </div>
+
+          <div class="item">
+            <label for="lname"> Address of the current school/pre-school <span>*</span></label>
+            <input id="current_school_address" type="text" name="lname" />
+          </div>
+
+          <div class="item">
+            <label for="lname"> Reason for leaving the current school/pre-school <span>*</span></label>
+            <input id="reason_for_leaving" type="text" name="lname" />
+          </div>
+
+
+          <div class="item">
+            <p>Curriculum at the current school: </p>
+            <select id="curriculum" value="Cambridge">
+              <option value="Cambridge">Cambridge</option>
+              <option value="IB">IB</option>
+              <option value="CBSE">CBSE</option>
+              <option value="ICSE">ICSE</option>
+              <option value="SSC">SSC</option>
+            </select>
+          </div>
+
+          <div class="item">
+            <label for="address">Curriculum at the current school: If Other (please specify)<span>*</span></label>
+            <input id="other_curriculum" type="text" name="address" />
+          </div>
+
+          <div class="item">
+            <p>Please provide details where applicable: (Input NA where not applicable)</p>
+            <div class="item">
+              <label for="address">a. Any specific medical condition or history, e.g. any disability, chronic illness,
+                surgery, etc. </label>
+              <input id="any_medical_condition" type="text" name="address" />
+            </div>
+
+            <div class="item">
+              <label for="address">b. Any allergies to food, drugs, etc. </label>
+              <input id="allergies_to_food" type="text" name="address" />
+            </div>
+
+            <div class="item">
+              <label for="address">c. Any learning difficulty or special needs </label>
+              <input id="learning_difficulty" type="text" name="address" />
+            </div>
+
+
+            Please provide copy of the relevant report(s) at the time of admission counselling. This is to ensure that
+            we can provide the necessary support in areas for which we have the capability and resources, and to let you
+            know in case we do not have specialist expertise in-house to support any specific conditions.
+
+
+          </div>
+        </div>
+        <!-- </fieldset>
+      
+            <fieldset> -->
+        <!-- <legend>About the Parent</legend> -->
+
+        <div class="columns">
+          <div class="item">
+            <label for="fname">Mother's full name <span>*</span></label>
+            <input id="mother_name" type="text" name="fname" />
+          </div>
+
+          <div class="item">
+            <label for="phone">Phone Number<span>*</span></label>
+            <input id="mother_phone" type="tel" name="phone" class="form-control" />
+          </div>
+
+          <div class="item">
+            <label for="eaddress">Email Address<span>*</span></label>
+            <input id="mother_email" type="text" name="eaddress" class="form-control" />
+          </div>
+
+          <div class="item">
+            <label for="fname">Current Residential Address (if different from the child’s) </label>
+            <input id="mother_address" type="text" name="fname" />
+          </div>
+
+          <div class="item">
+            <p>Professional status: </p>
+            <select id="mother_professional_status">
+              <option value="Salaried job" selected>- Salaried job </option>
+              <option value="Self-employed">- Self-employed </option>
+              <option value="Homemaker">- Homemaker</option>
+              <option value="Any other">- Any other</option>
+            </select>
+          </div>
+
+          <div class="item">
+            <p>If salaried/ self-employed:</p>
+            <div class="item">
+              <label for="address">Name of the organisation </label>
+              <input id="mother_organisation" type="text" name="address" />
+            </div>
+
+            <div class="item">
+              <label for="address">Designation </label>
+              <input id="mother_designation" type="text" name="address" />
+            </div>
+
+            <div class="item">
+              <label for="address">Area of specialisation </label>
+              <input id="mother_specialisation" type="text" name="address" />
+            </div>
+
+            <div class="item">
+              <label for="address">Annual income (in INR) </label>
+              <input id="mother_annual_income" type="text" name="address" />
+            </div>
+          </div>
+
+          <div class="item">
+            <label for="fname">Father's full name <span>*</span></label>
+            <input id="father_name" type="text" name="fname" />
+          </div>
+
+          <div class="item">
+            <label for="phone">Phone Number<span>*</span></label>
+            <input id="father_phone" type="tel" name="phone" class="form-control" />
+          </div>
+
+          <div class="item">
+            <label for="eaddress">Email Address<span>*</span></label>
+            <input id="father_email" type="text" name="eaddress" class="form-control" />
+          </div>
+
+          <div class="item">
+            <label for="fname">Current Residential Address (if different from the child’s) </label>
+            <input id="father_address" type="text" name="fname" />
+          </div>
+
+          <div class="item">
+            <p>Professional status: </p>
+            <select id="father_professional_status">
+              <option value="Salaried job" selected>- Salaried job </option>
+              <option value="Self-employed">- Self-employed </option>
+              <option value="Homemaker">- Homemaker</option>
+              <option value="Any other">- Any other</option>
+            </select>
+          </div>
+
+          <div class="item">
+            <p>If salaried/ self-employed:</p>
+            <div class="item">
+              <label for="address">Name of the organisation </label>
+              <input id="father_organisation" type="text" name="address" />
+            </div>
+
+            <div class="item">
+              <label for="address">Designation </label>
+              <input id="father_designation" type="text" name="address" />
+            </div>
+
+            <div class="item">
+              <label for="address">Area of specialisation </label>
+              <input id="father_specialisation" type="text" name="address" />
+            </div>
+
+            <div class="item">
+              <label for="address">Annual income (in INR) </label>
+              <input id="father_annual_income" type="text" name="address" />
+            </div>
+          </div>
+
+
+          <div class="item">
+            <p>Would you like to use school transport: </p>
+            <select id="school_transport">
+              <option value="Yes" selected>Yes </option>
+              <option value="No">No </option>
+              <option value="Can't say">Can't say</option>
+            </select>
+          </div>
+
+          <div class="item">
+            <label for="fname">What top 3 qualities are you looking for in the school for your child? </label>
+            <input id="top_3_qualities" type="text" name="fname" />
+          </div>
+
+          <div class="item">
+            <p>How did you hear about C S I: </p>
+            <select id="hear_about_us">
+              <option value="Word of mouth">Word of mouth </option>
+              <option value="Internet / Website" selected>Internet / Website </option>
+              <option value="Social media">Social media</option>
+              <option value="Other child in C S I">Other child in C S I</option>
+              <option value="Any other (please specify)">Any other (please specify)</option>
+            </select>
+          </div>
+          <!-- </fieldset> -->
+
+
+      </fieldset>
+
+
+      <fieldset>
+        <legend>Details</legend>
+
+
+        <div class="columns">
+          <div class="item">
+            <label for="fname">Student's full name (as it should appear in all school documents and on class list)
+              <span>*</span></label>
+            <input id="student_full_name" type="text" name="fname" />
+          </div>
+
+          <div class="item">
+            <label for="fname">Religion <span>*</span></label>
+            <input id="religion" type="text" name="fname" />
+          </div>
+
+          <div class="item">
+            <label for="phone">Emergency contact<span>*</span></label>
+            <input id="emergency_contact" type="text" name="phone" class="form-control" />
+          </div>
+      </fieldset>
+
+      <fieldset>
+        <Legend>Guardian (other than parents) </Legend>
+
+        <div class="columns">
+          <div class="item">
+            <p>Title </p>
+            <select id="guardian_title">
+              <option value="Mr">Mr</option>
+              <option value="Ms">Ms</option>
+            </select>
+          </div>
+
+          <div class="item">
+            <label for="fname">First Name <span>*</span></label>
+            <input id="guardian_first_name" type="text" name="fname" />
+          </div>
+
+          <div class="item">
+            <label for="fname">Last Name </label>
+            <input id="guardian_last_name" type="text" name="fname" />
+          </div>
+
+          <div class="item">
+            <label for="lname"> Relationship with the child<span>*</span></label>
+            <input id="guardian_relationship" type="text" name="lname" />
+          </div>
+
+          <div class="item">
+            <label for="checkindate">DOB <span>*</span></label>
+            <input id="guardian_dob" type="date" name="checkindate" />
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+
+          <div class="item">
+            <label for="lname"> Address<span>*</span></label>
+            <input id="guardian_address" type="text" name="lname" />
+          </div>
+
+          <div class="item">
+            <label for="phone">Phone Number<span>*</span></label>
+            <input id="guardian_phone" type="text" name="phone" class="form-control" />
+          </div>
+          <div class="item">
+            <label for="eaddress">Email Address<span>*</span></label>
+            <input id="guardian_email" type="text" name="eaddress" class="form-control" />
+          </div>
+
+      </fieldset>
+
+
+
+
+      <fieldset>
+        <Legend>Student Academic Details </Legend>
+
+        <div class="columns">
+
+
+
+          <div class="item">
+            <label for="fname">Extra-curricular highlights <span>*</span></label>
+            <input id="extra_curricular_highlights" type="text" name="fname" />
+          </div>
+
+          <div class="item">
+            <label for="fname">Special Interests </label>
+            <input id="special_interests" type="text" name="fname" />
+          </div>
+
+          <div class="item">
+            <label for="myfile">Does the child fall under Gifted or High Ability category? <span
+                style="font-style: italic"> provide relevant supporting documents </span></label>
+            <input type="file" id="gifted_category_file" name="myfile">
+          </div>
+
+      </fieldset>
+
+      <fieldset>
+        <Legend>Sibling information </Legend>
+
+        <div class="columns">
+
+
+
+          <div class="item">
+            <p>Sibling Information (1)</p>
+            <label for="fname">Name </label>
+            <input id="sibling_1_name" type="text" name="fname" />
+
+            <label for="fname">Age</label>
+            <input id="sibling_1_age" type="number" name="fname" />
+
+            <label for="fname">School/ College studying at:</label>
+            <input id="sibling_1_school" type="text" name="fname" />
+
+            <label for="fname">Grade/ Class:</label>
+            <input id="sibling_1_class" type="text" name="fname" />
+
+          </div>
+
+
+          <div class="item">
+            <p>Sibling Information (2)</p>
+            <label for="fname">Name </label>
+            <input id="sibling_2_name" type="text" name="fname" />
+
+            <label for="fname">Age </label>
+            <input id="sibling_2_age" type="number" name="fname" />
+
+            <label for="fname">School/ College studying at:</label>
+            <input id="sibling_2_school" type="number" name="fname" />
+
+            <label for="fname">Grade/ Class:</label>
+            <input id="sibling_2_class" type="text" name="fname" />
+          </div>
+      </fieldset>
+
+      <fieldset>
+        <Legend>Health Information </Legend>
+
+        <div class="columns">
+
+
+
+          <div class="item">
+            <label for="fname">Blood Group <span>*</span></label>
+            <input id="blood_group" type="text" name="fname" />
+          </div>
+
+          <div class="item">
+            <label for="fname">Immunisation History <span>*</span></label>
+            <input id="immunisation_history" type="text" name="fname" />
+          </div>
+
+          <div class="item">
+            <label for="fname">Any ongoing medication or medical procedure <span>*</span></label>
+            <input id="ongoing_medication" type="text" name="fname" />
+          </div>
+
+          <div class="item">
+            <label for="fname">Any chronic illness or disability that requires special support (if not mentioned in Form
+              A) <span>*</span></label>
+            <input id="chronic_illness" type="text" name="fname" />
+          </div>
+
+          <div class="item">
+            <label for="fname">Any allergies (if not mentioned in Form A) <span>*</span></label>
+            <input id="allergies" type="text" name="fname" />
+          </div>
+
+      </fieldset>
+
+
+
+
+
+      <fieldset>
+        <Legend>Family status </Legend>
+
+        <div class="columns"></div>
+
+
+
+        <div class="item">
+          <label for="fname">Please mention in case there is any specific situation in the family that the School should
+            be aware of and be able to support the child sensitively with. This could include family matters like
+            separation or divorce of parents/recent demise of a close family member/new member in the family/relocation/
+            etc. Please input NA if this is not applicable. <span>*</span></label>
+          <textarea id="family_status" /></textarea>
+        </div>
+
+
+      </fieldset>
+
+
+
+
+      <fieldset>
+        <Legend>Persons authorised to pick up and drop off the child from school / school bus stop </Legend>
+
+        <div class="columns">
+
+          <div class="item">
+            <label for="fname">Name 1 <span>*</span></label>
+            <input id="authorised_person_1_name" type="text" name="fname" />
+          </div>
+
+          <div class="item">
+            <label for="fname">Relationship with the child <span>*</span></label>
+            <input id="authorised_person_1_relationship" type="text" name="fname" />
+          </div>
+
+          <div class="item">
+            <label for="myfile">Attach Photograph in JPEG format</label><span>*</span>
+            <input type="file" id="authorised_person_1_photo" name="myfile">
+          </div>
+
+          <div class="item">
+            <label for="fname">Name 2 <span>*</span></label>
+            <input id="authorised_person_2_name" type="text" name="fname" />
+          </div>
+
+          <div class="item">
+            <label for="fname">Relationship with the child <span>*</span></label>
+            <input id="authorised_person_2_relationship" type="text" name="fname" />
+          </div>
+
+          <div class="item">
+            <label for="myfile">Attach Photograph in JPEG format</label><span>*</span>
+            <input type="file" id="authorised_person_2_photo" name="myfile">
+          </div>
+
+          <div class="item">
+            <label for="fname">Name 3</label>
+            <input id="authorised_person_3_name" type="text" name="fname" />
+          </div>
+
+          <div class="item">
+            <label for="fname">Relationship with the child </label>
+            <input id="authorised_person_3_relationship" type="text" name="fname" />
+          </div>
+
+          <div class="item">
+            <label for="myfile">Attach Photograph in JPEG format</label>
+            <input type="file" id="authorised_person_3_photo" name="myfile">
+          </div>
+
+          <div class="item">
+            <label for="fname">Name 4 </label>
+            <input id="authorised_person_4_name" type="text" name="fname" />
+          </div>
+
+          <div class="item">
+            <label for="fname">Relationship with the child </label>
+            <input id="authorised_person_4_relationship" type="text" name="fname" />
+          </div>
+
+          <div class="item">
+            <label for="myfile">Attach Photograph in JPEG format</label>
+            <input type="file" id="authorised_person_4_photo" name="myfile">
+          </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Attachments</legend>
+        <div class="item">
+          <label for="myfile">Attach Photograph in JPEG format</label>
+          <input type="file" id="student_photo" name="myfile">
+        </div>
+
+        <div class="item">
+          <label for="myfile">Student's Passport No </label>
+          <input type="number" id="student_passport_num" name="myfile">
+        </div>
+
+        <div class="item">
+          <label for="myfile">Date of Issue </label>
+          <input type="text" id="student_passport_date_of_issue" name="myfile">
+        </div>
+
+        <div class="item">
+          <label for="myfile">Date of Expiry </label>
+          <input type="text" id="student_passport_date_of_expiry" name="myfile">
+        </div>
+
+        <div class="item">
+          <label for="myfile">Student's Passport Photocopy (In case your child does't not have passport please attach
+            only his/her birth certificate)</label>
+          <input type="file" id="student_passport_photocopy" name="myfile">
+        </div>
+
+
+        <div class="item">
+          <label for="myfile">OCI Card/VISA Copy (This is compulsory for the students who are Non-Citizens of
+            India.)</label>
+          <input type="file" id="student_oci_card" name="myfile">
+        </div>
+
+        <div class="item">
+          <label for="fname">Student Aadhar Card No <span>*</span></label>
+          <input id="student_aadhar_card_num" type="text" name="fname" />
+        </div>
+
+        <div class="item">
+          <label for="myfile">Student Aadhar Card Photocopy</label>
+          <input type="file" id="student_aadhar_card_photo_copy" name="myfile">
+
+          <div class="item">
+            <div class="item">
+              <label for="myfile">Transfer Certificate</label>
+              <input type="file" id="student_transfer_certificate" name="myfile">
+
+              <div class="item">
+                <label for="myfile">Report Card of previous class</label>
+                <input type="file" id="student_previous_class_report_card" name="myfile">
+
+                <div class="item">
+                  <label for="myfile">Address Proof copy</label>
+                  <input type="file" id="student_address_proof_copy" name="myfile">
+
+                  <div class="item">
+                    <label for="myfile">Vaccination Card of the Child</label>
+                    <input type="file" id="student_vaccination_card" name="myfile">
+
+                    <div class="item">
+                      <label for="myfile">Passport size coloured photograph of the child<labe>*</labe></label>
+                      <input type="file" id="student_passport_size_coloured_photograph" name="myfile">
+
+                      <div class="item">
+                        <label for="myfile">Passport size coloured photograph of the Parent (Father)<labe>*</labe>
+                        </label>
+                        <input type="file" id="father_passport_size_coloured_photograph" name="myfile">
+
+                        <div class="item">
+                          <label for="myfile">Passport size colorued photograph of the Parent(Mother)<labe>*</labe>
+                          </label>
+                          <input type="file" id="mother_passport_size_coloured_photograph" name="myfile">
+
+                          <div class="item">
+                            <label for="myfile">Father Aadhar Card No</label>
+                            <input type="text" id="father_aadhar_card" name="myfile">
+
+                            <div class="item">
+                              <label for="myfile">Father Aadhar Card Photocopy<labe>*</labe></label>
+                              <input type="file" id="father_aadhar_card_photocopy" name="myfile">
+
+                              <div class="item">
+                                <label for="myfile">Mother Aadhar Card No</label>
+                                <input type="text" id="mother_aadhar_card_num" name="myfile">
+
+                                <div class="item">
+                                  <label for="myfile">Mother Aadhar Card Photocopy<labe>*</labe></label>
+                                  <input type="file" id="mother_aadhar_card_photocopy" name="myfile">
+
+                                  <div class="item">
+                                    <label for="myfile">Name of the Person Responsible for paying fees<labe>*</labe>
+                                    </label>
+                                    <input type="text" id="responsible_person_name" name="myfile">
+
+                                    <div class="item">
+                                      <label for="myfile">Pan Card No of the Person</label>
+                                      <input type="text" id="responsible_person_pan_card" name="myfile">
+
+                                      <div class="item">
+                                        <!-- <label for="myfile">Responsible for Paying Fees<labe>*</labe></label>
+                                        <input type="text" id="" name="myfile"> -->
+
+                                        <div class="item">
+                                          <label for="myfile">Pan Card Photocopy of the person responsible for paying
+                                            fees<labe>*</labe></label>
+                                          <input type="file" id="responsible_person_pan_card_photo_copy" name="myfile">
+
+
+
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Fee structure </legend>
+
+        <div class="item">
+          <p>I hereby declare that I have read and understood the fee details, terms & conditions and accept the same.
+          </p>
+          <select id="i_confirm">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+      </fieldset>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Payment details </legend>
+
+        <label for="fname">Amount:<span>*</span></label>
+        <input id="payment_amout" type="text" name="fname" />
+
+        <label for="fname">Payment Status <span>*</span></label>
+        <input id="payment_status" type="text" name="fname" />
+
+        <label for="fname">Payment Mode <span>*</span></label>
+        <input id="payment_mode" type="text" name="fname" />
+
+        <label for="fname">Receipt No. <span>*</span></label>
+        <input id="payment_receipt" type="text" name="fname" />
+      </fieldset>
+
+
+      <fieldset>
+        <legend>Declaration </legend>
+
+        <label for="fname">Name of the person filling the form <span>*</span></label>
+        <input id="declaration_person_name" type="text" name="fname" />
+
+        <label for="fname">Relation with student <span>*</span></label>
+        <input id="declaration_person_relation" type="text" name="fname" />
+
+        <label for="fname">Form signed/submitted date <span>*</span></label>
+        <input id="declaration_person_form_sign_date" type="text" name="fname" />
+
+        <div class="item">
+          <p>I hereby certify that the information provided by us in this form and its annexure is correct.</p>
+          <select id="i_confirm_2">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Statutory Information mandated by Department of Education of Telangana State</legend>
+
+        <label for="fname">Caste<span>*</span></label>
+        <input id="caste" type="text" name="fname" />
+
+        <label for="fname">Availability of Aadhaar <span>*</span></label>
+        <input id="availability_of_aadhaar" type="text" name="fname" />
+
+        <label for="fname">Is Bio-Metric updated on Aadhaar </label>
+        <input id="bio_metric_updated" type="text" name="fname" />
+
+        <label for="fname">Personal Identification Marks-I </label>
+        <input id="personal_identification_marks_1" type="text" name="fname" />
+
+        <label for="fname">Personal Identification Marks-II </label>
+        <input id="personal_identification_marks_2" type="text" name="fname" />
+
+        <label for="fname">Name of the Permanent District <span>*</span></label>
+        <input id="permanent_district" type="text" name="fname" />
+
+        <label for="fname">Name of the Permanent Mandal <span>*</span></label>
+        <input id="permanent_mandal" type="text" name="fname" />
+
+        <label for="fname">GP/Municipality/ Revenue <span>*</span></label>
+        <input id="gp_revenue" type="text" name="fname" />
+
+        <label for="fname">Name of the Permanent Habitation</label>
+        <input id="permanent_habitation" type="text" name="fname" />
+
+        <label for="fname">Name of the Present District <span>*</span></label>
+        <input id="present_district" type="text" name="fname" />
+
+        <label for="fname">Name of Present Mandal <span>*</span></label>
+        <input id="present_mandal" type="text" name="fname" />
+      </fieldset>
+      <div class="btn-block">
+        <button type="submit" id="save-btn">Submit</button>
+      </div>
+    </form>
+  </div>
+
+
+  <form class="payment-btn">
+    <script src="https://checkout.razorpay.com/v1/payment-button.js"
+      data-payment_button_id="pl_GFyeDndED5eOMJ"> </script>
+  </form>
+  <script src="js/common.js"></script>
+  <script src="js/step3.js"></script>
+</body>
+
+</html>

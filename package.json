@@ -1,0 +1,44 @@
+{
+  "name": "student",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=local UPLOADS_DIR=/home/prashant/one/student-admission-app/uploads nodemon app.js",
+    "build": "webpack --mode production"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "cls-bluebird": "^2.1.0",
+    "config": "^3.3.2",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "email-validator": "^2.0.4",
+    "excel4node": "^1.7.2",
+    "express": "^4.17.1",
+    "html-pdf": "^2.2.0",
+    "jsonschema": "^1.2.8",
+    "mime": "^2.4.7",
+    "mkdirp": "^1.0.4",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5",
+    "nodemailer": "^6.4.17",
+    "nodemon": "^2.0.4",
+    "path": "^0.12.7",
+    "sequelize": "^6.3.5",
+    "shortid": "^2.2.16",
+    "utf8": "^3.0.0",
+    "uuid": "^8.3.1",
+    "webpack": "^5.11.0"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^5.1.2",
+    "nodemon": "^2.0.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-node-externals": "^1.7.2",
+    "zip-webpack-plugin": "^3.0.0"
+  }
+}
